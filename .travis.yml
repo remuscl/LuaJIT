@@ -12,10 +12,11 @@ compiler:
   - clang
 
 install:
-    - sudo apt-get install -qq -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make build-essential valgrind
+    - sudo apt-get install -qq -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make build-essential gcc-7
     
 script:
     - ls /usr/include
+    - ls /usr/include/valgrind
     - gcc --version
     - make -j10
     - ldd src/luajit
