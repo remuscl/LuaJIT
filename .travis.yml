@@ -12,9 +12,13 @@ compiler:
   - clang
 
 install:
-    - sudo apt-get install -qq -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make build-essential gcc-7
+    - sudo apt-get install -qq -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make build-essential
+    - sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    - sudo apt-get update
+    - sudo apt-get install gcc-7
     
 script:
+    - gcc-7 --version
     - ls /usr/include
     - ls /usr/include/valgrind
     - gcc --version
