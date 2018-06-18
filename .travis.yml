@@ -21,12 +21,19 @@ install:
 script:
     - cat /proc/cpuinfo && free -m && uname -a
     - gcc-7 --version
+    - gcc --version
     - gcc -g -O2 t.c -o t64
     - gcc -g -O2 -m32 t.c -o t32
     - ./t32
     - ./t64
     - file t64
     - file t32
+    - gcc-7 -g -O2 t.c -o t7-64
+    - gcc-7 -g -O2 -m32 t.c -o t7-32
+    - ./t7-64
+    - ./t7-32
+    - file t7-32
+    - file t7-64
     - time valgrind --leak-check=full --error-exitcode=135 --tool=memcheck ./t64
     - time valgrind --leak-check=full --error-exitcode=135 --tool=memcheck ./t32
     - ls /usr/include
