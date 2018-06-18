@@ -23,6 +23,8 @@ script:
     - gcc-7 --version
     - gcc -g -O2 t.c -o t64
     - gcc -g -O2 -m32 t.c -o t32
+    - ./t32
+    - ./t64
     - file t64
     - file t32
     - time valgrind --leak-check=full --error-exitcode=135 --tool=memcheck ./t64
