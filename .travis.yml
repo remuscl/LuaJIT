@@ -13,7 +13,6 @@ compiler:
 
 install:
     - sudo apt-get install -qq -y libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl make build-essential valgrind
-    - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7
     
 script:
     - ls /usr/include
