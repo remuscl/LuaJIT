@@ -13,6 +13,6 @@ xcalloc (size_t x, size_t y)
   if (__builtin_mul_overflow (x, y, &sz))
     return NULL;
   void *ret = malloc (sz);
-  if (ret) memset (res, 0, sz);
+  if (ret) memset (ret, 0, sz);
   return ret;
 }
