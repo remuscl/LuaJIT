@@ -1,5 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 extern int* gli;
 void __attribute__((force_align_arg_pointer)) test(){
     *gli = *gli + 1;
