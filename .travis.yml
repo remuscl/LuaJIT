@@ -37,9 +37,9 @@ script:
     - gcc -Wall -Werror -c t2.c -o t2.o
     - objdump -Mintel -d t2.o
     - gcc-5 -Wall -Werror -c t2.c -o t2-5.o
-    - objdump -Mintel -d t2.o
+    - objdump -Mintel -d t2-5.o
     - gcc-7 -Wall -Werror -c t2.c -o t2-7.o
-    - objdump -Mintel -d t2.o
+    - objdump -Mintel -d t2-7.o
     - ls -hl
     - time valgrind --leak-check=full --error-exitcode=135 --tool=memcheck ./t64
     - time valgrind --leak-check=full --error-exitcode=135 --tool=memcheck ./t32
