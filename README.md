@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/remuscl/LuaJIT.svg?branch=master)](https://travis-ci.org/remuscl/LuaJIT)
+
 README for LuaJIT 2.0.4
 -----------------------
 
