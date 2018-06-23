@@ -36,6 +36,9 @@ script:
     - ./t7-32
     - file t7-32
     - file t7-64
+    - clang --version
+    - clang -Wall -Werror -c t2.c -o t2.o
+    - objdump -Mintel -d t2.o
     - gcc -Wall -Werror -c t2.c -o t2.o
     - objdump -Mintel -d t2.o
     - gcc-5 -Wall -Werror -c t2.c -o t2-5.o
