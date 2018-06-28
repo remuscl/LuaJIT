@@ -17,5 +17,5 @@ Please point your favorite browser to:
  doc/luajit.html
 
 
-![test]("./test.png")
+![test](test.png)
  
